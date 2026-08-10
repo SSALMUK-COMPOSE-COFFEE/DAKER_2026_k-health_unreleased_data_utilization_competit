@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "n_total": 573,
+    "n_analysable": 376,
+    "types": {
+      "무신호": 135,
+      "규칙포착": 235,
+      "규칙미발화": 6
+    },
+    "type_frac": {
+      "무신호": 0.35904255319148937,
+      "규칙포착": 0.625,
+      "규칙미발화": 0.015957446808510637
+    },
+    "median_t_phys_h": 18.25,
+    "median_t_rule_h": 14.5,
+    "median_t_obs_h": 31.5,
+    "median_recognition_gap_h": -11.625,
+    "median_detection_gap_h": 4.5,
+    "frac_late_recognition": 0.25,
+    "frac_no_rule": 0.375,
+    "frac_no_signal": 0.35904255319148937,
+    "median_los_h": 158.75833333333333,
+    "median_arrest_to_death_min": 39.5,
+    "frac_immediate_death": 0.4521276595744681
+  },
+  "concordance": {
+    "c": 0.8077276663816302,
+    "lo": 0.7823895631905826,
+    "hi": 0.8330657695726778,
+    "n": 503
+  },
+  "curve": [
+    {
+      "threshold": 3,
+      "sensitivity": 0.774869109947644,
+      "median_lead_h": 48.358333333333334,
+      "n_fired": 444,
+      "n_total": 573
+    },
+    {
+      "threshold": 4,
+      "sensitivity": 0.6527050610820244,
+      "median_lead_h": 15.633333333333333,
+      "n_fired": 374,
+      "n_total": 573
+    },
+    {
+      "threshold": 5,
+      "sensitivity": 0.5671902268760908,
+      "median_lead_h": 9.833333333333334,
+      "n_fired": 325,
+      "n_total": 573
+    },
+    {
+      "threshold": 6,
+      "sensitivity": 0.525305410122164,
+      "median_lead_h": 7.916666666666667,
+      "n_fired": 301,
+      "n_total": 573
+    },
+    {
+      "threshold": 7,
+      "sensitivity": 0.49214659685863876,
+      "median_lead_h": 6.633333333333334,
+      "n_fired": 282,
+      "n_total": 573
+    },
+    {
+      "threshold": 8,
+      "sensitivity": 0.44851657940663175,
+      "median_lead_h": 5.283333333333333,
+      "n_fired": 257,
+      "n_total": 573
+    },
+    {
+      "threshold": 9,
+      "sensitivity": 0.37521815008726006,
+      "median_lead_h": 4.75,
+      "n_fired": 215,
+      "n_total": 573
+    },
+    {
+      "threshold": 10,
+      "sensitivity": 0.3036649214659686,
+      "median_lead_h": 3.7583333333333333,
+      "n_fired": 174,
+      "n_total": 573
+    }
+  ],
+  "curve_sustained": [
+    {
+      "threshold": 3,
+      "sensitivity": 0.6893542757417103,
+      "median_lead_h": 30.65,
+      "n_fired": 395,
+      "n_total": 573
+    },
+    {
+      "threshold": 4,
+      "sensitivity": 0.5654450261780105,
+      "median_lead_h": 12.841666666666667,
+      "n_fired": 324,
+      "n_total": 573
+    },
+    {
+      "threshold": 5,
+      "sensitivity": 0.47643979057591623,
+      "median_lead_h": 8.85,
+      "n_fired": 273,
+      "n_total": 573
+    },
+    {
+      "threshold": 6,
+      "sensitivity": 0.4432809773123909,
+      "median_lead_h": 7.866666666666666,
+      "n_fired": 254,
+      "n_total": 573
+    },
+    {
+      "threshold": 7,
+      "sensitivity": 0.41012216404886565,
+      "median_lead_h": 7.15,
+      "n_fired": 235,
+      "n_total": 573
+    },
+    {
+      "threshold": 8,
+      "sensitivity": 0.3682373472949389,
+      "median_lead_h": 5.716666666666667,
+      "n_fired": 211,
+      "n_total": 573
+    },
+    {
+      "threshold": 9,
+      "sensitivity": 0.3019197207678883,
+      "median_lead_h": 5.166666666666667,
+      "n_fired": 173,
+      "n_total": 573
+    },
+    {
+      "threshold": 10,
+      "sensitivity": 0.2443280977312391,
+      "median_lead_h": 4.416666666666667,
+      "n_fired": 140,
+      "n_total": 573
+    }
+  ],
+  "truth_mix": {
+    "abrupt": 183,
+    "gradual": 275,
+    "silent": 115
+  }
+}

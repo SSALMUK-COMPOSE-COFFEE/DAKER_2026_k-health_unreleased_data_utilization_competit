@@ -1,0 +1,71 @@
+================================================================================================
+오염된 약물명 정규화 + 허가사항 권고 주입시간 대조
+================================================================================================
+
+[1] RxNorm 정규화 — 입력 22개 문자열
+
+설명서 표기                   → 표준 성분                            rxcui   score
+--------------------------------------------------------------------------
+BevaciZumab              bevacizumab                       253337    12.8
+Bevacizumb               bevacizumab                       253337     8.0
+Carboplatin              carboplatin                        40048    13.1
+Cetuximab                cetuximab                         318341    14.0
+Cisplain                 cisplatin                           2555     8.8
+Cisplatin                cisplatin                           2555    13.5
+Cisplatine               cisplatin                           2555    13.5
+Gemcitabin               gemcitabine                        12574    12.8
+Gemcitabine              gemcitabine                        12574    12.8
+Irinotecan               irinotecan                         51499    13.2
+Leucovorin               leucovorin                          6313    12.6
+Leucovorin sod           leucovorin                          6313    12.6
+Nivolumab                nivolumab                        1597876    13.4
+Nivolumab 옵디보주           nivolumab                        1597876    13.4
+Oxailplatin              oxaliplatin                        32592     8.2
+Oxaliplati               oxaliplatin                        32592     8.8
+Oxaliplatin              oxaliplatin                        32592    13.3
+pembrolizumab            pembrolizumab                    1547545    13.7
+Pembrolizumb             pembrolizumab                    1547545     9.5
+Perbrolizumab            pembrolizumab                    1547545    10.6
+Ramucirumab              ramucirumab                      1535922    14.1
+Trastuzumab-Deruxt       trastuzumab                      2267582    12.8
+
+  → 22개 문자열이 12개 성분으로 수렴
+  → 실패 0건
+
+[2] openFDA 허가사항(CC0) 권고 주입시간 — 성분 12개
+
+성분                              라벨  권고 주입시간 (분)
+------------------------------------------------------------------------------------------------
+bevacizumab                   7614  30, 60, 90
+carboplatin                   5199  주입시간 문구 없음 (bolus·경구 등)
+cetuximab                     6050  60
+cisplatin                     2460  360
+gemcitabine                   7782  30
+irinotecan                   13903  90, 120, 1320
+leucovorin                    7672  240, 5040
+nivolumab                    19873  3~5
+oxaliplatin                   6115  2~4, 120
+pembrolizumab                23032  1, 2
+ramucirumab                   7084  30, 60
+trastuzumab                  11446  30, 90
+
+[3] 데이터의 처방시간 [30, 60, 90, 120]분과 대조
+
+성분                             30분     60분     90분    120분
+------------------------------------------------------------------------------------------------
+bevacizumab                     적합      적합      적합      이탈
+cetuximab                       이탈      적합      이탈      이탈
+cisplatin                       이탈      이탈      이탈      이탈
+gemcitabine                     적합      이탈      이탈      이탈
+irinotecan                      이탈      이탈      적합      적합
+leucovorin                      이탈      이탈      이탈      이탈
+nivolumab                       이탈      이탈      이탈      이탈
+oxaliplatin                     이탈      이탈      이탈      적합
+pembrolizumab                   이탈      이탈      이탈      이탈
+ramucirumab                     적합      적합      이탈      이탈
+trastuzumab                     적합      이탈      적합      이탈
+
+  적합 12 / 이탈 32
+
+  ※ '이탈'은 해당 처방시간이 그 약의 허가사항 권고 범위 밖이라는 뜻이다.
+     실제 판정에는 실측 편차를 더해야 하므로, 이 표는 편차 이전의 기준선이다.
